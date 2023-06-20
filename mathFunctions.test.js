@@ -21,7 +21,7 @@ describe("mathFunctions is a collection of methods that perform mathematical ope
     });
 
     // Test cases for divide
-    test("Should return null", () => {
+    test("Not possible to divide by 0", () => {
         expect(divide(0, 3)).toBeNull();
     });
 

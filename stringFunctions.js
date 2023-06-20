@@ -24,6 +24,7 @@ function isPalindrome(str) {
     let end = str.length - 1;
 
     // Compare both ends of the string up until the middle
+    // If at any point the mirroring characters don't match then return false
     while (start <= end) {
         if (str[start] !== str[end]) {
             return false;

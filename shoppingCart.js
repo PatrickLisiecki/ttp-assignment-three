@@ -1,5 +1,7 @@
+// Empty cart will store items
 const cart = [];
 
+// Prices for available items
 const prices = {
     apple: 1,
     pear: 2,
@@ -7,30 +9,37 @@ const prices = {
     eggs: 7,
 };
 
-// Push an item onto the cart if the parameters are valid
-function addToCart(item, quantity) {
-    if (typeof item === "undefined" || quantity === 0) {
+// Push an item onto the cart or add to an items quantity
+function addToCart(itemName, quantity) {
+    // Check if parameters are valid
+    if (typeof itemName === "undefined" || quantity === 0) {
         return null;
     }
 
-    const existingItem = cart.find((cartItem) => cartItem.itemName === item);
+    // Check if item is already in cart
+    const existingItem = cart.find(
+        (cartItem) => cartItem.itemName === itemName
+    );
 
+    // If the item already exists then add to its quantity
     if (existingItem) {
         existingItem.itemQuantity += quantity;
     } else {
-        cart.push({itemName: item, itemQuantiy: quantity});
+        cart.push({ itemName: itemName, itemQuantity: quantity });
     }
 }
 
-addToCart({ itemName: "apple", itemQuantity: 10 });
-addToCart({ itemName: "pear", itemQuantity: 5 });
-
-console.log(cart);
-
 // Find the item in the cart by its name and update the specified quantity
 function removeFromCart(itemName, quantity) {
+    // Check if parameters are valid
+    if (typeof itemName === "undefined" || typeof quantity === "undefined") {
+        return null;
+    }
+
+    // Search for the item in the cart
     const item = cart.find((cartItem) => cartItem.itemName === itemName);
 
+    // Verify that the item exists and decrease its quantity
     if (!item) {
         return null;
     } else {
@@ -38,14 +47,11 @@ function removeFromCart(itemName, quantity) {
     }
 }
 
-removeFromCart("apple", 5);
-
-console.log(cart);
-
 // Sum the price of each item multiplied by its quantity
 function calculateTotal() {
     let total = 0;
 
+    // For each item get its corresponding price and multiply it by its quantity
     for (const item of cart) {
         total += prices[item.itemName] * item.itemQuantity;
     }
@@ -53,11 +59,9 @@ function calculateTotal() {
     return total;
 }
 
-console.log(calculateTotal());
-
 module.exports = {
     addToCart,
     removeFromCart,
     calculateTotal,
-    cart
+    cart,
 };
