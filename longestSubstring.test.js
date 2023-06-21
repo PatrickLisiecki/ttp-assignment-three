@@ -1,9 +1,9 @@
 const longestSubstring = require("./longestSubstring");
 
-describe("stringFunctions is a collection of methods for a string", () => {
+describe("Longest substring without repeating characters", () => {
     // Test cases for longest substring
     test("Empty string should return null", () => {
-        expect(longestSubstring("")).toBeNull();
+        expect(longestSubstring("")).toBe(0);
     });
 
     test("longestSubstring(abcabcbb) => 3", () => {

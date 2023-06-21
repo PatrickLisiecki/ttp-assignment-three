@@ -2,8 +2,8 @@ const { reverseString, isPalindrome } = require("./stringFunctions");
 
 describe("stringFunctions is a collection of methods for a string", () => {
     // Test cases for reversing a string
-    test("Empty string should return null", () => {
-        expect(reverseString("")).toBeNull();
+    test("Empty string should return nothing", () => {
+        expect(reverseString("")).toBe("");
     });
 
     test("reverseString(hello) => olleh", () => {
@@ -20,7 +20,7 @@ describe("stringFunctions is a collection of methods for a string", () => {
 
     // Test cases for checking if a string is a palindrome
     test("Empty string should return null", () => {
-        expect(isPalindrome("")).toBeNull();
+        expect(isPalindrome("")).toBe("");
     });
 
     test("isPalindrome(hello) => false", () => {

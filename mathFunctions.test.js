@@ -1,6 +1,6 @@
 const { add, subtract, multiply, divide } = require("./mathFunctions");
 
-describe("mathFunctions is a collection of methods that perform mathematical operations", () => {
+describe("A collection of functions that perform mathematical operations", () => {
     // Test cases for add
     test("Missing parameter should return null", () => {
         expect(add(1)).toBeNull();

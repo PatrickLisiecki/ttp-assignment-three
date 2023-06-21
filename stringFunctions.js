@@ -3,7 +3,7 @@ function reverseString(str) {
 
     // Check if string is empty
     if (str.length === 0) {
-        return null;
+        return "";
     }
 
     // Create a new string that appends the characters of the original string in reverse order
@@ -17,7 +17,7 @@ function reverseString(str) {
 function isPalindrome(str) {
     // Check if string is empty
     if (str.length === 0) {
-        return null;
+        return "";
     }
 
     let start = 0;

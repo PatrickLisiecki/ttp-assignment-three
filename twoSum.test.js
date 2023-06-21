@@ -1,6 +1,6 @@
 const twoSum = require("./twoSum");
 
-describe("twoSum", () => {
+describe("Find the indexes of two numbers that add up to a target value", () => {
     // Test cases for twoSum
     test("twoSum([2, 7, 11, 15], 9) => [0, 1]", () => {
         expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);

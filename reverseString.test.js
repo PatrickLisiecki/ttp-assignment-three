@@ -1,9 +1,9 @@
 const reverseString = require("./reverseString");
 
-describe("stringFunctions is a collection of methods for a string", () => {
+describe("Reverse a string", () => {
     // Test cases for reversing a string
-    test("Empty string should return null", () => {
-        expect(reverseString("")).toBeNull();
+    test("Empty string should return nothing", () => {
+        expect(reverseString("")).toBe("");
     });
 
     test("reverseString(hello) => olleh", () => {

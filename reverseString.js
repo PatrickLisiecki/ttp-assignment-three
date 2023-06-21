@@ -3,7 +3,7 @@ function reverseString(str) {
 
     // Check if string is empty
     if (str.length === 0) {
-        return null;
+        return "";
     }
 
     // Create a new string that appends the characters of the original string in reverse order

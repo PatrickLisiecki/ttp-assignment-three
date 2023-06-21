@@ -2,6 +2,7 @@
 const cart = [];
 
 // Prices for available items
+// For testing purposes
 const prices = {
     apple: 1,
     pear: 2,
