@@ -1,6 +1,6 @@
 # TTP Assignment 3
 
-Assignment for Tech Talent Pipeline Summer 2023 bootcamp
+Assignment for the Tech Talent Pipeline Summer 2023 Bootcamp
 
 ## Part 1: Basic Unit Testing
 
@@ -115,7 +115,7 @@ To install and set up the project, follow these steps:
 git clone https://github.com/PatrickLisiecki/ttp-assignment-three
 ```
 
-2. Open the project directory:
+2. Open the project directory.
 
 3. Install the required dependencies:
 
